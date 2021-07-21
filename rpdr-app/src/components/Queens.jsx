@@ -1,9 +1,8 @@
-import React from 'react'
-
-function Queens() {
+function Queens(props){
+  const { queenData } = props 
   return (
     <div>
-      queens
+      <p>{queenData.dragname}</p>
     </div>
   )
 }
