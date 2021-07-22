@@ -1,6 +1,7 @@
 import {useState, useEffect } from 'react'
 import axios from 'axios'
-import Queens from './Queens'
+import Queens from '../Queens'
+import './styles.css'
 
 function QueensList() {
   const [queenInfo, setQueenInfo] = useState([])
@@ -15,7 +16,7 @@ useEffect(() => {
   console.log(queenInfo)
 
   return (
-    <div>
+    <div className="queen-container">
     {queenInfo.map((queen)=> <Queens queenData={queen} />)}    
     </div>
   )
