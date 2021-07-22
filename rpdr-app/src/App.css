@@ -3,8 +3,19 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  font-size: 2em;
 }
 
 .route {
-  padding: 10px;
+  padding: 20px;
+}
+
+a.nav-link:link, a.nav-link:visited {
+  color: #ED4B4B;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+a.nav-link:hover, a.nav-link:active {
+  text-decoration: underline;
 }
