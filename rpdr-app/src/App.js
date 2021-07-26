@@ -2,12 +2,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
-import Challenges from './components/Challenges';
 import QueensList from './components/QueensList';
 import './App.css'
-import Searchbox from "./components/SearchBox";
+import GetOneQueen from "./components/OneQueen";
+import Navbar from "./components/Navbar";
+import EliminatedList from "./components/EliminatedList";
+import FavoriteList from "./components/FavoriteList";
 
 <head>
 <style>
@@ -19,24 +20,20 @@ function App() {
   return (
     <Router>
       <nav>
-        <ul className="onglets">
-          <li className="route">
-            <Link to="/" className="nav-link">Queens</Link>
-          </li>
-          <li className="route">
-            <Link to="/challenges" className="nav-link">Runway Challenges</Link>
-          </li>
-          <li className="route">
-           <Searchbox />
-          </li>
-        </ul>
+   <Navbar />
       </nav>
       <Switch>
           <Route exact path="/">
             <QueensList />
           </Route>
-          <Route path="/challenges">
-            <Challenges />
+          <Route path="/queens/name/:queenName">
+            <GetOneQueen />
+          </Route>
+          <Route path="/eliminated">
+            <EliminatedList />
+          </Route>
+          <Route path="/favorites">
+            <FavoriteList />
           </Route>
         </Switch>
     </Router>
